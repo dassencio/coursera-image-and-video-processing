@@ -1,0 +1,21 @@
+language: generic
+
+dist: trusty
+sudo: required
+
+git:
+  depth: 3
+
+install:
+  - sudo apt-get update
+  - sudo apt-get install -qq poppler-utils
+
+script:
+  - IFS=$'\n'; for file in $(find . -iname "*.pdf" | sort); do echo "Validate $file"; pdftotext "$file" &> /dev/null || exit 1; done; echo "All PDF files are valid."
+
+notifications:
+  email:
+    recipients:
+      - diego@assencio.com
+    on_success: change
+    on_failure: always
