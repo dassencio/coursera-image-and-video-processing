@@ -1,5 +1,3 @@
-[![Build Status](https://api.travis-ci.com/dassencio/coursera-image-and-video-processing.svg?branch=master)](https://travis-ci.com/dassencio/coursera-image-and-video-processing)
-
 # Description
 
 This repository contains PDF slides for the Cousera course "Image and video
